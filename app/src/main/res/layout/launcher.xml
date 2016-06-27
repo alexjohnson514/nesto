@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/launcher_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launchscreen"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:paddingLeft="15dp"
+        android:src="@drawable/nesto_white1" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/sandton_image1"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="285dp"
+        android:layout_marginTop="140dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/sandton_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/sandton_image1"
+        android:layout_alignTop="@id/sandton_image1"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <!-- android:src="@drawable/sandton_image1" -->
+
+
+    <!-- android:src="@drawable/vvv_image1" -->
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw2_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="15dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vw2_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw2_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignTop="@id/vw2_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw3_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="80dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vw_text_three"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw3_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw3_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw4_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="230dp"
+        android:layout_marginRight="15dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vw4_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw4_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw4_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw5_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="85dp"
+        android:layout_marginRight="290dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vw5_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw5_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw5_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw6_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="120dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vw6_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw6_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw6_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/feedbackmain"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/feedback_icon_black"
+                    android:text="Feedback"
+                    android:textColor="#5DA8D7"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vertical_separator" />
+
+            <RelativeLayout
+                android:id="@+id/clock_parent"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="1dp" >
+
+                <TextClock
+                    android:id="@+id/digitalClock1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="2dp"
+                    android:format12Hour="hh:mm a"
+                    android:format24Hour="kk:mm:ss"
+                    android:gravity="center"
+                    android:text="DigitalClock"
+                    android:textColor="#5DA8D7"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vertical_separator" />
+
+            <ImageView
+                android:id="@+id/close_app"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sleep_button" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contactUsHeader"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" >
+
+            <RelativeLayout
+                android:id="@+id/continueVideoLoop"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/continueVideoLoopText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Theater"
+                    android:textColor="#5DA8D7"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vertical_separator" />
+
+            <RelativeLayout
+                android:id="@+id/contactUs"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:id="@+id/contactUsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/contact_us_icon"
+                    android:text="Contact Us "
+                    android:textColor="#5DA8D7"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/jt_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="80dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/jt_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/jt_image"
+        android:layout_alignTop="@id/jt_image"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw_image1"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginBottom="15dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vw_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vw_image1"
+        android:layout_alignTop="@+id/vw_image1"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vrielink_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="290dp"
+        android:layout_marginBottom="85dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/vrielink_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vrielink_image"
+        android:layout_alignTop="@id/vrielink_image"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/piet_image"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="140dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true"
+        android:src="@drawable/wifi_circle_icon"/>
+
+    <TextView
+        android:id="@+id/piet_text"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/piet_image"
+        android:layout_alignTop="@id/piet_image"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/videoLoopParent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <VideoView
+            android:id="@+id/videoLoopView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:focusableInTouchMode="true" />
+
+        <com.example.td_advert.view.CircularImageView
+            android:id="@+id/video_button"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="44dp"
+            android:layout_marginRight="44dp"
+            app:border="true"
+            app:border_color="@color/Graylight"
+            app:border_width="7"
+            app:shadow="true"
+            android:src="@drawable/wifi_circle_icon"/>
+
+        <TextView
+            android:id="@+id/video_button_text"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/video_button"
+            android:layout_alignTop="@id/video_button"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/blackstrip_video"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:visibility="invisible" />
+
+  <!--       <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/video_button"
+            android:layout_alignRight="@id/video_button"
+            android:layout_marginRight="-30dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Click Here"
+            android:src="@drawable/video_loop_click_here" /> -->
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/launcher_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launchscreen"
+    android:orientation="vertical" >
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/sandton_image1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="229dp"
+        android:layout_marginTop="97dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/sandton_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/sandton_image1"
+        android:layout_alignTop="@id/sandton_image1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <!-- android:src="@drawable/sandton_image1" -->
+
+
+    <!-- android:src="@drawable/vvv_image1" -->
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw2_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="220dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vw2_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw2_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignTop="@id/vw2_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw3_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false"
+        android:layout_marginRight="62dp"
+        android:layout_marginTop="62dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vw_text_three"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw3_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw3_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw4_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="220dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vw4_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw4_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw4_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw5_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false"
+        android:layout_marginRight="273dp"
+        android:layout_marginTop="246dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vw5_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw5_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw5_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+     <com.example.td_advert.view.CircularImageView
+         android:id="@+id/vw6_image"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="false"
+         android:layout_marginRight="132dp"
+         app:border="true"
+         app:border_color="@color/Graylight"
+         app:border_width="7"
+         app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vw6_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vw6_image"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@id/vw6_image"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/feedbackmain"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/feedback_icon_black"
+                android:text="FeedBack"
+                android:textColor="#5DA8D7"
+                android:textSize="26dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/clock_parent"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@+id/jt_image"
+            android:layout_alignParentTop="true"
+            android:gravity="center" >
+
+            <DigitalClock
+                android:id="@+id/digitalClock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="DigitalClock"
+                android:textColor="#5DA8D7"
+                android:textSize="26dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/jt_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="62dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/jt_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/jt_image"
+        android:layout_alignTop="@id/jt_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vw_image1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="132dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vw_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vw_image1"
+        android:layout_alignTop="@+id/vw_image1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/vrielink_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="273dp"
+        android:layout_marginTop="246dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/vrielink_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vrielink_image"
+        android:layout_alignTop="@id/vrielink_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <com.example.td_advert.view.CircularImageView
+        android:id="@+id/piet_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="229dp"
+        android:layout_marginTop="97dp"
+        app:border="true"
+        app:border_color="@color/Graylight"
+        app:border_width="7"
+        app:shadow="true" />
+
+    <TextView
+        android:id="@+id/piet_text"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/piet_image"
+        android:layout_alignTop="@id/piet_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blackstrip"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="8.3%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="50dp"
+    >
+    <Row>
+        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
+        <Key android:codes="50" android:keyLabel="2"/>
+        <Key android:codes="51" android:keyLabel="3"/>
+        <Key android:codes="52" android:keyLabel="4"/>
+        <Key android:codes="2000" android:keyLabel="ู"/>
+        <Key android:codes="53" android:keyLabel="5"/>
+        <Key android:codes="54" android:keyLabel="6"/>
+        <Key android:codes="55" android:keyLabel="7"/>
+        <Key android:codes="56" android:keyLabel="8"/>
+        <Key android:codes="57" android:keyLabel="9"/>
+        <Key android:codes="-5" android:keyLabel="ลบ" android:keyWidth="16.5%p"  android:isRepeatable="true" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="2001" android:keyLabel="๐" android:keyEdgeFlags="left"/>
+        <Key android:codes="34" android:keyLabel="&quot;" />
+        <Key android:codes="2002" android:keyLabel="ฎ"/>
+        <Key android:codes="2003" android:keyLabel="ฑ"/>
+        <Key android:codes="2004" android:keyLabel="ธ"/>
+        <Key android:codes="2005" android:keyLabel="ํ"/>
+        <Key android:codes="2006" android:keyLabel="๊"/>
+        <Key android:codes="2007" android:keyLabel="ณ"/>
+        <Key android:codes="2008" android:keyLabel="ฯ"/>
+        <Key android:codes="2009" android:keyLabel="ญ"/>
+        <Key android:codes="2010" android:keyLabel="ฐ"/>
+        <Key android:codes="44" android:keyLabel="," android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="2011" android:keyLabel="ฤ" android:keyEdgeFlags="left"/>
+        <Key android:codes="2012" android:keyLabel="ฆ"/>
+        <Key android:codes="2013" android:keyLabel="ฏ"/>
+        <Key android:codes="2014" android:keyLabel="โ"/>
+        <Key android:codes="2015" android:keyLabel="ฌ"/>
+        <Key android:codes="2016" android:keyLabel="็"/>
+        <Key android:codes="2017" android:keyLabel="๋"/>
+        <Key android:codes="2018" android:keyLabel="ษ"/>
+        <Key android:codes="2019" android:keyLabel="ศ"/>
+        <Key android:codes="2020" android:keyLabel="ซ"/>
+        <Key android:codes="2021" android:keyLabel="ฅ"/>
+        <Key android:codes="46" android:keyLabel="." android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="-1" android:keyLabel="CAPS" android:keyEdgeFlags="left"/>
+        <Key android:codes="40" android:keyLabel="("/>
+        <Key android:codes="41" android:keyLabel=")"/>
+        <Key android:codes="2022" android:keyLabel="ฉ"/>
+        <Key android:codes="2023" android:keyLabel="ฮ"/>
+        <Key android:codes="2024" android:keyLabel="ฺ"/>
+        <Key android:codes="2025" android:keyLabel="์"/>
+        <Key android:codes="63" android:keyLabel="\?"/>
+        <Key android:codes="2026" android:keyLabel="ฒ"/>
+        <Key android:codes="2027" android:keyLabel="ฬ"/>
+        <Key android:codes="2028" android:keyLabel="ฦ"/>
+        <Key android:codes="35" android:keyLabel="#" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="5000" android:keyLabel="ENG 123" android:keyWidth="10%p"  android:keyEdgeFlags="left"/>
+        <Key android:codes="37" android:keyLabel="%" android:keyWidth="10%p" />
+        <Key android:codes="38" android:keyLabel="&amp;" android:keyWidth="10%p" />
+        <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="50%p" android:isRepeatable="true"/>
+        <Key android:codes="-4" android:keyLabel="เสร็จ" android:keyWidth="19.2%p" android:keyEdgeFlags="right"/>
+    </Row>
+
+</Keyboard>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="8.3%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="50dp"
+    >
+    <Row>
+        <Key android:codes="1000" android:keyLabel="ๅ" android:keyEdgeFlags="left"/>
+        <Key android:codes="1001" android:keyLabel="ภ"/>
+        <Key android:codes="1002" android:keyLabel="ถ"/>
+        <Key android:codes="1003" android:keyLabel="ุ"/>
+        <Key android:codes="1004" android:keyLabel="ึ"/>
+        <Key android:codes="1005" android:keyLabel="ค"/>
+        <Key android:codes="1006" android:keyLabel="ต"/>
+        <Key android:codes="1007" android:keyLabel="จ"/>
+        <Key android:codes="1008" android:keyLabel="ข"/>
+        <Key android:codes="1009" android:keyLabel="ช" />
+        <Key android:codes="-5" android:keyLabel="DEL" android:keyWidth="16.5%p" android:isRepeatable="true" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="1010" android:keyLabel="ๆ" android:keyEdgeFlags="left"/>
+        <Key android:codes="1011" android:keyLabel="ไ"/>
+        <Key android:codes="1012" android:keyLabel="ำ"/>
+        <Key android:codes="1013" android:keyLabel="พ"/>
+        <Key android:codes="1014" android:keyLabel="ะ"/>
+        <Key android:codes="1015" android:keyLabel="ั"/>
+        <Key android:codes="1016" android:keyLabel="ี"/>
+        <Key android:codes="1017" android:keyLabel="ร"/>
+        <Key android:codes="1018" android:keyLabel="น"/>
+        <Key android:codes="1019" android:keyLabel="ย"/>
+        <Key android:codes="1020" android:keyLabel="บ"/>
+        <Key android:codes="1021" android:keyLabel="ล" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="1022" android:keyLabel="ฟ" android:keyEdgeFlags="left"/>
+        <Key android:codes="1023" android:keyLabel="ห"/>
+        <Key android:codes="1024" android:keyLabel="ก"/>
+        <Key android:codes="1025" android:keyLabel="ด"/>
+        <Key android:codes="1026" android:keyLabel="เ"/>
+        <Key android:codes="1027" android:keyLabel="้"/>
+        <Key android:codes="1028" android:keyLabel="่"/>
+        <Key android:codes="1029" android:keyLabel="า"/>
+        <Key android:codes="1030" android:keyLabel="ส"/>
+        <Key android:codes="1031" android:keyLabel="ว"/>
+        <Key android:codes="1032" android:keyLabel="ง"/>
+        <Key android:codes="1033" android:keyLabel="ฃ" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="-1" android:keyLabel="CAPS" android:keyEdgeFlags="left"/>
+        <Key android:codes="1034" android:keyLabel="ผ"/>
+        <Key android:codes="1035" android:keyLabel="ป"/>
+        <Key android:codes="1036" android:keyLabel="แ"/>
+        <Key android:codes="1037" android:keyLabel="อ"/>
+        <Key android:codes="1038" android:keyLabel="ิ"/>
+        <Key android:codes="1039" android:keyLabel="ื"/>
+        <Key android:codes="1040" android:keyLabel="ท"/>
+        <Key android:codes="1041" android:keyLabel="ม"/>
+        <Key android:codes="1042" android:keyLabel="ใ"/>
+        <Key android:codes="1043" android:keyLabel="ฝ"/>
+        <Key android:codes="46" android:keyLabel="." android:keyEdgeFlags="right"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="5000" android:keyLabel="ENG 123" android:keyWidth="10%p"  android:keyEdgeFlags="left"/>
+        <Key android:codes="95,45,63" android:keyLabel="_ - \?" android:keyWidth="10%p" />
+        <Key android:codes="47" android:keyLabel="/" android:keyWidth="10%p" />
+        <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="50%p" android:isRepeatable="true"/>
+        <Key android:codes="-4" android:keyLabel="เสร็จ" android:keyWidth="19.2%p" android:keyEdgeFlags="right"/>
+    </Row>
+
+</Keyboard>

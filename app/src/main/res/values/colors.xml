@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightwhite">#F0F0F0</color>
+    <color name="red">#FF0000</color>
+    <color name="transparent">#ff000000</color>
+    <color name="last_name">#660000</color>
+    <color name="partner_count_bg">#808080</color>
+    <color name="gray_bg">#e6e6e6</color>
+    <color name="green">#008000</color>
+    <color name="bg_selected">#c8ffc8</color>
+    <color name="bg_toolbar_top">#ff9999</color>
+    <color name="bg_toolbar_bottom">#b20101</color>
+    <color name="bg_button_top">#7d7e7d</color>
+    <color name="bg_button_top_pressed">#3a393c</color>
+    <color name="bg_button_bottom">#0f0f0f</color>
+    <color name="bg_button_border">#000000</color>
+    <color name="Gray">#808080</color>
+    <color name="Blue">#0000FF</color>
+    <color name="Graylight">#eeeeee</color>
+    <color name="Grayhot">#272727</color>
+    <color name="black_overlay">#66000000</color>
+
+</resources>

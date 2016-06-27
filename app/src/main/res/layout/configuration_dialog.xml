@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="725dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/blue_background_box" >
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/close_button" />
+
+        <RelativeLayout
+            android:id="@+id/bodyArea"
+            android:layout_width="675dp"
+            android:layout_height="320dp"
+            android:background="@drawable/contact_us_message_box"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/close_button">
+
+            <LinearLayout
+                android:id="@+id/buttonPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="152dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/horizontal_box_send"
+                    android:text="Save"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/exit_app_button"
+                    android:layout_width="152dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/horizontal_box_send"
+                    android:text="Exit App"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtbuildno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonPanel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Version: "
+                android:textColor="#284391"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/testDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonPanel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="210dp"
+                android:layout_marginBottom="15dp"
+                android:text="Test Device:"
+                android:textColor="#284391"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                android:layout_below="@+id/txtbuildno"
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:text="Taxi No:"
+                    android:textColor="#7e9fcc"
+                    android:textSize="26dp" />
+
+                <EditText
+                    android:id="@+id/txtLiscenceNo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Taxi No. here" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/txtbuildno"
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxi Station:   "
+                    android:textColor="#7e9fcc"
+                    android:textSize="26dp" />
+
+                <Spinner
+                    android:layout_width="309dp"
+                    android:layout_height="63dp"
+                    android:id="@+id/taxiStationSelector" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/body"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-6dp"
+        android:background="@drawable/header_box_contact_us_feedback" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Configuration"
+            android:textColor="@color/white"
+            android:textSize="26dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

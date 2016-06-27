@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_margin="1dp"
+        android:background="@drawable/contact_us_background"
+        android:alpha=".98">
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Oi@nesto.com.br"
+                android:drawableLeft="@drawable/email_sm"
+                android:textColor="#5DA8D7"
+                android:textSize="18dp"
+                android:editable="false"
+                android:gravity="center"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="+55 11-2312-0643"
+                android:textColor="#5DA8D7"
+                android:drawableLeft="@drawable/phone_sm"
+                android:textSize="18dp"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="www.nesto.com.br"
+                android:textColor="#5DA8D7"
+                android:drawableLeft="@drawable/site_sm"
+                android:textSize="18dp"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NestoMidia"
+                android:drawableLeft="@drawable/facebook_sm"
+                android:textColor="#5DA8D7"
+                android:textSize="18dp"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

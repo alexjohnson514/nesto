@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        tadvert {
+            keyAlias 'tadvert'
+            keyPassword '123password'
+//            storeFile file('D:/Narongdej/Dropbox/Key/keystore-t_advert_adil')
+            storeFile file('keystore')
+            storePassword '123password'
+        }
+    }
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+    defaultConfig {
+        applicationId "com.example.td_advert"
+        minSdkVersion 17
+        targetSdkVersion 19
+        signingConfig signingConfigs.tadvert
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.tadvert
+        }
+        debug {
+            signingConfig signingConfigs.tadvert
+        }
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    compile 'com.android.support:support-v4:19.0.0'
+    compile 'com.google.code.gson:gson:2.3'
+    compile files('libs/androidannotations-2.7.1.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/CWAC-WakefulIntentService.jar')
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile files('libs/robotium-solo-5.3.1.jar')
+    compile 'com.google.android.gms:play-services-maps:7.8.0'
+    compile 'com.google.android.gms:play-services-location:7.8.0'
+    testCompile 'junit:junit:4.12'
+}

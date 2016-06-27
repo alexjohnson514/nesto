@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root1"
+    style="@style/Theme.Transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="600dp"
+        android:layout_height="450dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/feedback_background"
+        android:focusableInTouchMode="true" >
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/close_button" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView9"
+            android:src="@drawable/email_sm"
+            android:layout_alignTop="@+id/contaxtUsTextArea"
+            android:layout_alignStart="@+id/ratingBar"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="60dp" />
+
+        <EditText
+            android:id="@+id/contaxtUsTextArea"
+            android:layout_width="550dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp"
+            android:gravity="top"
+            android:hint="Mensagem"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:paddingLeft="50dp"
+            android:paddingTop="10dp"
+            android:textAlignment="gravity"
+            android:textColor="#5DA8D7"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp"
+            android:background="@drawable/textarea_bg">
+        </EditText>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView8"
+            android:src="@drawable/phone_sm2"
+            android:layout_alignTop="@+id/phone_num"
+            android:layout_alignStart="@+id/ratingBar"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/phone_num"
+            android:layout_width="550dp"
+            android:layout_height="48dp"
+            android:imeOptions="flagNoExtractUi"
+            android:layout_above="@id/contaxtUsTextArea"
+            android:layout_marginBottom="10dp"
+            android:hint="Número do telefone"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingLeft="50dp"
+            android:textColor="#5DA8D7"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp"
+            android:background="@drawable/textbox_bg"
+            android:layout_marginLeft="25dp">
+        </EditText>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView7"
+            android:src="@drawable/user_sm"
+            android:layout_alignTop="@+id/name"
+            android:layout_alignStart="@+id/ratingBar"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="550dp"
+            android:layout_height="48dp"
+            android:layout_above="@id/phone_num"
+            android:layout_marginBottom="10dp"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingLeft="50dp"
+            android:textColor="#5DA8D7"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp"
+            android:layout_alignEnd="@+id/close_button"
+            android:autoText="false"
+            android:background="@drawable/textbox_bg"
+            android:layout_marginRight="5dp">
+        </EditText>
+
+        <RelativeLayout
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/contaxtUsTextArea"
+            android:layout_marginLeft="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                android:layout_width="wrap_content"
+                style="@style/FeedbackRatingBar"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="152dp"
+            android:layout_height="32dp"
+            android:background="@drawable/submit_btn"
+             android:textColor="@color/white"
+            android:text="Enviar"
+            android:layout_alignTop="@+id/ratingBar"
+            android:layout_alignEnd="@+id/close_button"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/body"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Divida com a gente o que você esta pensando e ganhe prêmios de graça!"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/viewfliper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/feedbacklayer" >
+
+        <include
+            android:id="@+id/myid1"
+            layout="@layout/layout_one" />
+
+        <include
+            android:id="@+id/myid2"
+            layout="@layout/layouttwo" />
+
+        <include
+            android:id="@+id/myid3"
+            layout="@layout/layout_three" />
+
+        <include
+            android:id="@+id/myid4"
+            layout="@layout/layout_four" />
+
+        <include
+            android:id="@+id/myid5"
+            layout="@layout/layout_five" />
+
+        <include
+            android:id="@+id/myid5"
+            layout="@layout/video_layout" />
+    </ViewFlipper>
+
+    <LinearLayout
+        android:id="@+id/feedbacklayer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:text="Back"
+            android:drawableLeft="@drawable/back_icon"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/feedbackmain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:text="Feedback"
+            android:drawableLeft="@drawable/feedback_icon"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <DigitalClock
+            android:id="@+id/digitalClock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:text="DigitalClock"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/welocomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <!-- android:background="@drawable/arrowtext_1red" -->
+
+        <TextView
+            android:id="@+id/nu_in_de_bioascope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <!-- android:background="@drawable/arrowtext_2white" -->
+
+        <TextView
+            android:id="@+id/evenementen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <!-- android:background="@drawable/arrowtext_3white" -->
+
+        <TextView
+            android:id="@+id/schrjit_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <!-- android:background="@drawable/arrowtext_4white" -->
+
+        <TextView
+            android:id="@+id/reserveen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <!-- android:background="@drawable/arrowtext_5white" -->
+    </LinearLayout>
+
+</RelativeLayout>

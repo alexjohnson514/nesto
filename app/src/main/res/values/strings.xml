@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Nesto</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="contact_us_text">
+        Thank you for your interest in T-Advert. We are proud to 
+        present you  our interactive marketing-tool. Feel free to send us a 
+        message below or email us at info@t-advert.com for 
+        further inquiries. We provide advertising for both SME\'s as
+        multi-nationals to reach out to millions of consumers each month.</string>
+    <string name="simple_ime">Simple IME</string>
+    <string name="start_query_text">Você gostaria de nos ajudar respondendo algumas questões? \nNão vai demorar mais que 20 segundos!</string>
+    <string name="send_query_text">Obrigado por participar</string>
+    <string name="gender_text">Género?</string>
+    <string name="own_text">DO YOU OWN A CAR?</string>
+    <string name="old_text">Idade?</string>
+    <string name="income_text">WHAT"'"S YOUR INCOME?</string>
+    <string name="occupation_text">Qual a sua ocupação?</string>
+    <string name="education_text">WHAT"'"S YOUR EDUCATION?</string>
+    <string name="start_query">Começar</string>
+    <string name="send_query">Enviar</string>
+    <string name="gender_male">Homem</string>
+    <string name="gender_female">Mulher</string>
+    <string name="income_10_thb">10,000 THB - 20,000THB</string>
+    <string name="income_20_thb">20,000 THB - 40,000THB</string>
+    <string name="income_40_thb">40,000 THB - 60,000THB</string>
+    <string name="income_60_thb">60,000 THB +</string>
+    <string name="under_25">&lt; 25</string>
+
+    <string name="buy_under_4_thb">UNDER 400,000THB</string>
+    <string name="buy_4_thb">400,000 THB - 800,000THB</string>
+    <string name="buy_8_thb">800,000 THB - 2,000,000THB</string>
+    <string name="buy_20_thb">2,000,000THB +</string>
+
+    <string name="education_not_high">Did not complete High school</string>
+    <string name="education_high">High school</string>
+    <string name="education_bachelor">Bachelor Degree</string>
+    <string name="education_master">Master Degree</string>
+    <string name="familar_text">Você esta familiarizado com esta mídia?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="annoying">Irritante</string>
+    <string name="not_interesting">Pouco interessante</string>
+    <string name="interesting">Interessante</string>
+    <string name="very_interesting">Muito interessante</string>
+    <string name="fav_type">Quais conteúdos você gostaria de ver nesta mídia?</string>
+    <string name="news">Notícias</string>
+    <string name="games">Jogos</string>
+    <string name="many_discounts">Descontos diversos</string>
+    <string name="ads_fav">Propagandas\nda sua marca preferida</string>
+    <string name="city_guide">Guia da cidade</string>
+    <string name="use_again">Dada a oportunidade, você usaria nosso produto novamente?</string>
+    <string name="office">Estudante</string>
+    <string name="govern">Setor Privado</string>
+    <string name="hospital">Setor Público</string>
+    <string name="business">Saúde</string>
+    <string name="others">Outros</string>
+    <string name="rate">Como você avaliaria a nossa mídia?</string>
+</resources>

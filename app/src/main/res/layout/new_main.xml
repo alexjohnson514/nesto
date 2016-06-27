@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <VideoView
+        android:id="@+id/background_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background_image" />
+
+    <LinearLayout
+        android:id="@+id/feedbacklayer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/backbuttonView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/back_icon"
+                android:gravity="center"
+                android:text="Home"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/vertical_separator" />
+
+        <TextView
+            android:id="@+id/feedbackmain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/feedback_icon"
+            android:gravity="center_vertical"
+            android:text="Feedback"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/vertical_separator" />
+
+        <DigitalClock
+            android:id="@+id/digitalClock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="DigitalClock"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="280dp"
+        android:layout_height="230dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="12dp"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/welocomeButton"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="1dp" >
+
+            <!--
+                 <TextView
+                android:id="@+id/welocomeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+            -->
+        </View>
+
+        <View
+            android:id="@+id/nu_in_de_bioascope"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp" />
+
+            <!--
+                 <TextView
+                android:id="@+id/nu_in_de_bioascope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+            -->
+
+        <View
+            android:id="@+id/evenementen"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp" >
+
+            <!--
+                 <TextView
+                android:id="@+id/evenementen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+            -->
+        </View>
+
+        <View
+            android:id="@+id/schrjit_win"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp" >
+
+            <!--
+                 <TextView
+                android:id="@+id/schrjit_win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+            -->
+        </View>
+
+        <View
+            android:id="@+id/reserveen"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp" >
+
+            <!--
+                 <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="17dp"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+            -->
+        </View>
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewfliper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/myid1"
+            layout="@layout/new_layout_one" />
+
+        <include
+            android:id="@+id/myid2"
+            layout="@layout/new_layouttwo" />
+
+        <include
+            android:id="@+id/myid3"
+            layout="@layout/new_layout_three" />
+
+        <include
+            android:id="@+id/myid4"
+            layout="@layout/new_layout_four" />
+
+        <include
+            android:id="@+id/myid5"
+            layout="@layout/new_layout_five" />
+
+        <include
+            android:id="@+id/myid5"
+            layout="@layout/video_layout" />
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/timeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:visibility="invisible" />
+
+</RelativeLayout>
