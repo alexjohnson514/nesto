@@ -354,17 +354,14 @@
 
         <ImageView
             android:id="@+id/tadvert_logo"
-            android:layout_width="235px"
+            android:layout_width="210px"
             android:layout_height="wrap_content"
-            android:paddingLeft="-15dp"
             android:src="@drawable/nesto_white1"
             android:layout_alignBottom="@+id/top_white_bar"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/company_image10_container"
-            android:layout_marginLeft="17dp"
             android:layout_gravity="center"
-            android:paddingTop="-10dp"
-            android:layout_marginTop="-20px"
+            android:layout_marginTop="-30px"
             android:layout_toRightOf="@+id/company_image10_container" />
 
         <ImageView
@@ -394,7 +391,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true">
@@ -411,7 +407,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:gravity="center"
-                android:paddingLeft="1dp" >
+                android:paddingLeft="1dp"
+                android:onClick="onChangeTheme">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -421,7 +418,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/imageView"
+                        android:id="@+id/ivCalendar"
                         android:src="@drawable/calendar" />
 
                     <LinearLayout
@@ -487,7 +484,7 @@
                         android:layout_marginLeft="10dp">
 
                         <ImageView
-                            android:id="@+id/feedBack"
+                            android:id="@+id/ivFeedBack"
                             android:layout_width="80dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="0dp"
@@ -604,7 +601,7 @@
                         android:layout_marginLeft="10dp" >
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/ivBrightness"
                             android:layout_width="80dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="0dp"
@@ -655,7 +652,7 @@
                         android:layout_marginLeft="10dp" >
 
                         <ImageView
-                            android:id="@+id/imageView2"
+                            android:id="@+id/ivVideo"
                             android:layout_width="80dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="0dp"
@@ -706,7 +703,7 @@
                         android:layout_marginLeft="10dp" >
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/ivContact"
                             android:layout_width="80dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="0dp"

@@ -11,7 +11,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.location.Address;
+import android.location.Criteria;
 import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.ConnectivityManager;
@@ -99,7 +103,8 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class LauncharScreen extends BaseActivity implements OnClickListener, View.OnTouchListener, VideoLooperCallback, OnMapReadyCallback {
+public class LauncharScreen extends BaseActivity
+		implements OnClickListener, View.OnTouchListener, VideoLooperCallback, OnMapReadyCallback, LocationListener {
 
 	com.example.td_advert.view.CircularImageView jtImage, pietImage,
 			sandtonImage, vrielinkImage, vvvImage, vwimage2, vwimage3,
@@ -116,7 +121,7 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
     FrameLayout trailerView;
 	AlertDialog categoryDialog;
 	TextClock dc;
-	Boolean isNight;
+	Boolean isNight = false;
 	private ImageView closeApp = null;
 	private GoogleMap mMap;
 	private VideoLoopThread videoLoopThread = null;
@@ -174,6 +179,19 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 	ImageView testQuestionaires;
 	ImageView wifiIcon;
 	ImageView logo;
+	private View glare;
+	private FrameLayout topWhiteBar;
+	private ImageView ivCalendar;
+	private TextClock dclock;
+	private TextView feedBackTextView;
+	private ImageView ivFeedBack;
+	private TextView sleepTextView;
+	private ImageView ivBrightness;
+	private ImageView ivVideo;
+	private TextView contactUsTextView;
+	private ImageView backgroundImage;
+	private ImageView ivContactUs;
+	private GoogleMap googleMap;
 
 	public void onMapSearch(View view) {
 		EditText locationSearch = (EditText) findViewById(R.id.editText);
@@ -205,6 +223,31 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 		mMap.addMarker(new MarkerOptions().position(brasilia).title("Brasilia"));
 		mMap.moveCamera(CameraUpdateFactory.newLatLng(brasilia));
 		mMap.animateCamera(zoom);
+	}
+
+	@Override
+	public void onLocationChanged(Location location) {
+		double latitude = location.getLatitude();
+		double longitude = location.getLongitude();
+		LatLng latLng = new LatLng(latitude, longitude);
+		googleMap.addMarker(new MarkerOptions().position(latLng));
+		googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+		googleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+	}
+
+	@Override
+	public void onStatusChanged(String s, int i, Bundle bundle) {
+
+	}
+
+	@Override
+	public void onProviderEnabled(String s) {
+
+	}
+
+	@Override
+	public void onProviderDisabled(String s) {
+
 	}
 
 	//
@@ -266,13 +309,81 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 	@Override
 	protected void onResume() {
 		super.onResume();
-		checkDayNight();
+		changeTheme(true, true);
 	}
 
-	private void checkDayNight() {
+	/**
+	 * Detect night or day then change theme
+	 * @param detectNight
+	 * @param forceNight
+	 */
+	private void changeTheme(boolean detectNight, boolean forceNight) {
 		Calendar cal = Calendar.getInstance();
 		int hour = cal.get(Calendar.HOUR_OF_DAY);
-		boolean isNight = hour < 6 || hour > 18;
+		isNight = hour < 6 || hour > 18;
+		Boolean nightTheme;
+		if(detectNight)
+			nightTheme = isNight;
+		else
+			nightTheme = forceNight;
+		isNight = nightTheme;
+
+		int white = getResources().getColor(R.color.white);
+		int daycolor = getResources().getColor(R.color.day_text_color);
+		if(nightTheme)
+		{
+			glare.setVisibility(View.GONE);
+			logo.setImageResource(R.drawable.tadvert_logo_night);
+			logo.setPadding(0, 0, 0, 0);
+			topWhiteBar.setBackgroundResource(R.drawable.night_bar);
+			ivCalendar.setImageResource(R.drawable.calendar_night);
+			dclock.setTextColor(white);
+			textClockDay.setTextColor(white);
+			feedBackTextView.setTextColor(white);
+			ivFeedBack.setImageResource(R.drawable.feedback_night);
+			closeApp.setImageResource(R.drawable.sleep_night);
+			sleepTextView.setTextColor(white);
+			brightnessPercentageText.setTextColor(white);
+			ivBrightness.setImageResource(R.drawable.brightness_night);
+			ivVideo.setImageResource(R.drawable.theatre_night);
+			continueVideoLoop.setTextColor(white);
+			contactUsTextView.setTextColor(white);
+			ivContactUs.setImageResource(R.drawable.contact_us_night);
+			parentView.setBackgroundResource(R.drawable.star_still);
+			backgroundImage.setBackgroundResource(R.drawable.star_still);
+			if(bgSkyVideo.isPlaying()) {
+				bgSkyVideo.stopPlayback();
+			}
+			bgSkyVideo.setVideoURI(Uri.parse("android.resource://"
+					+ getPackageName() + "/" + R.raw.star_loop));
+			bgSkyVideo.start();
+		} else {
+			glare.setVisibility(View.VISIBLE);
+			logo.setImageResource(R.drawable.nesto_white1);
+			logo.setPadding(0, 0, 0, 0);
+			topWhiteBar.setBackgroundResource(R.drawable.white_bar);
+			ivCalendar.setImageResource(R.drawable.calendar);
+			dclock.setTextColor(daycolor);
+			textClockDay.setTextColor(daycolor);
+			feedBackTextView.setTextColor(daycolor);
+			ivFeedBack.setImageResource(R.drawable.feedback_icon_black);
+			closeApp.setImageResource(R.drawable.sleep_button);
+			sleepTextView.setTextColor(daycolor);
+			brightnessPercentageText.setTextColor(daycolor);
+			ivBrightness.setImageResource(R.drawable.brightness);
+			ivVideo.setImageResource(R.drawable.theatre);
+			continueVideoLoop.setTextColor(daycolor);
+			contactUsTextView.setTextColor(daycolor);
+			ivContactUs.setImageResource(R.drawable.contact_us);
+			parentView.setBackgroundResource(R.drawable.sky_still);
+			backgroundImage.setBackgroundResource(R.drawable.sky_still);
+			if(bgSkyVideo.isPlaying()) {
+				bgSkyVideo.stopPlayback();
+			}
+			bgSkyVideo.setVideoURI(Uri.parse("android.resource://"
+						+ getPackageName() + "/" + R.raw.sky_loop));
+			bgSkyVideo.start();
+		}
 	}
 
 	@Override
@@ -292,10 +403,7 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 				View.SYSTEM_UI_FLAG_FULLSCREEN
 						| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-		if(isNight)
-			setContentView(R.layout.launcher_full_screen_night);
-		else
-			setContentView(R.layout.launcher_full_screen);
+		setContentView(R.layout.launcher_full_screen);
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionManager(this));
 		Calendar now = Calendar.getInstance();
 		int year = now.get(Calendar.YEAR);
@@ -420,16 +528,15 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 		videoButtonText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
 
 		textClockDay.setText(weekdayString+", "+dateString+" "+monthString+" "+year);
-		TextView feedBackTextView = (TextView) findViewById(R.id.launcherfeedback);
+		feedBackTextView = (TextView) findViewById(R.id.launcherfeedback);
 		feedBackTextView.setTypeface(tf, Typeface.NORMAL);
-		TextView theaterTextView = (TextView) findViewById(R.id.continueVideoLoopText);
-		theaterTextView.setTypeface(tf, Typeface.NORMAL);
-		TextView contactUsTextView = (TextView) findViewById(R.id.contactUsText);
+		contactUsTextView = (TextView) findViewById(R.id.contactUsText);
 		contactUsTextView.setTypeface(tf, Typeface.NORMAL);
-        TextView sleepTextView = (TextView) findViewById(R.id.sleeptextview);
+		sleepTextView = (TextView) findViewById(R.id.sleeptextview);
         sleepTextView.setTypeface(tf, Typeface.NORMAL);
 
 		continueVideoLoop = (TextView) findViewById(R.id.continueVideoLoopText);
+		continueVideoLoop.setTypeface(tf, Typeface.NORMAL);
 		closeApp = (ImageView) findViewById(R.id.close_app);
 		brightnessButton = (RelativeLayout) findViewById(R.id.brightness_button);
 		brightnessPercentageText = (TextView) findViewById(R.id.brightness_percentage);
@@ -756,6 +863,15 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 	void init() {
 
         Util.appendLog("init() got called, setting up references");
+		glare = findViewById(R.id.glare);
+		topWhiteBar = (FrameLayout) findViewById(R.id.top_white_bar);
+		ivCalendar = (ImageView)findViewById(R.id.ivCalendar);
+		dclock = (TextClock)findViewById(R.id.digitalClock1);
+		ivFeedBack = (ImageView)findViewById(R.id.ivFeedBack);
+		ivBrightness = (ImageView)findViewById(R.id.ivBrightness);
+		ivVideo = (ImageView)findViewById(R.id.ivVideo);
+		ivContactUs = (ImageView)findViewById(R.id.ivContact);
+		backgroundImage = (ImageView) findViewById(R.id.placeholder_bg_sky);
 
 		jtImage = (com.example.td_advert.view.CircularImageView) findViewById(R.id.jt_image);
 		sandtonImage = (com.example.td_advert.view.CircularImageView) findViewById(R.id.sandton_image1);
@@ -802,10 +918,9 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 
 	private void hideAnimatableScreenElements() {
         try {
-            FrameLayout topWhiteBar = (FrameLayout) findViewById(R.id.top_white_bar);
             topWhiteBar.setVisibility(View.INVISIBLE);
             logo.setVisibility(View.INVISIBLE);
-            findViewById(R.id.glare).setVisibility(View.INVISIBLE);
+			glare.setVisibility(View.INVISIBLE);
             findViewById(R.id.feedback_area).setVisibility(View.INVISIBLE);
             findViewById(R.id.contact_us_area).setVisibility(View.INVISIBLE);
 
@@ -858,7 +973,6 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 			wifiIcon.setVisibility(View.VISIBLE);
 			findViewById(R.id.company_image6_container).setVisibility(
 					View.VISIBLE);
-			FrameLayout topWhiteBar = (FrameLayout) findViewById(R.id.top_white_bar);
 
 			AnimationSequence sequence = new AnimationSequence();
 			sequence.addPlayable(new Animation(this, topWhiteBar,
@@ -949,16 +1063,16 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
         }, 9500);*/
 
         handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+			@Override
+			public void run() {
 
-                Util.appendLog("disableClick = true");
-                disableClick(true);
-                hideAnimatableScreenElements();
-                Util.appendLog("welcome_screen handler call playVideo()");
-                playVideo();
-            }
-        }, 25000);
+				Util.appendLog("disableClick = true");
+				disableClick(true);
+				hideAnimatableScreenElements();
+				Util.appendLog("welcome_screen handler call playVideo()");
+				playVideo();
+			}
+		}, 25000);
 
     }
 
@@ -1125,28 +1239,28 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 					videoLoopView.pause();
 				}
 				bgSkyVideo.stopPlayback();
-                Company company = AppState.getInstance().getCompaniesList().get(iteration);
+				Company company = AppState.getInstance().getCompaniesList().get(iteration);
 
-                Log.v("Zenyai", company.getTabs().getVideo());
-                if(company.getTabs().getVideo() == null){
-                    finish();
-                    return;
-                }
+				Log.v("Zenyai", company.getTabs().getVideo());
+				if (company.getTabs().getVideo() == null) {
+					finish();
+					return;
+				}
 
 				videoLoopView = createVideoView();
 				videoLoopView.setVideoPath(company.getTabs().getVideo());
-                videoLoopView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
-                    public boolean onError(MediaPlayer mp, int what, int extra) {
-                        videoClick();
-                        return true;
-                    }
-                });
-                videoLoopView.setOnPreparedListener(new OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        mp.setVolume(0f, 0f);
-                    }
-                });
+				videoLoopView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+					public boolean onError(MediaPlayer mp, int what, int extra) {
+						videoClick();
+						return true;
+					}
+				});
+				videoLoopView.setOnPreparedListener(new OnPreparedListener() {
+					@Override
+					public void onPrepared(MediaPlayer mp) {
+						mp.setVolume(0f, 0f);
+					}
+				});
 				videoLoopView.start();
 
 				videoViewContainer.removeAllViews();
@@ -1164,12 +1278,12 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 
 
 				vlIterationNo++;
-				EasyTracker.getInstance(LauncharScreen.this).send(MapBuilder.createEvent("video_loop_event","video_played", company.getName() + "_video",
-								null).build());
+				EasyTracker.getInstance(LauncharScreen.this).send(MapBuilder.createEvent("video_loop_event", "video_played", company.getName() + "_video",
+						null).build());
 
 				saveAnalytic(company.getName() + "_video_played", 1);
 
-                disableClick = false;
+				disableClick = false;
 			}
 		});
 	}
@@ -1187,24 +1301,24 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 			@Override
 			public void run() {
 				if (!CompanyScreen.isOpen) {
-                    try {
-                        hideAnimatableScreenElements();
-                        startSkyBGAnimation();
+					try {
+						hideAnimatableScreenElements();
+						startSkyBGAnimation();
 
-                        videoLoopParent.setVisibility(View.GONE);
-                        videoButton.setVisibility(View.GONE);
-                        videoButtonText.setVisibility(View.GONE);
+						videoLoopParent.setVisibility(View.GONE);
+						videoButton.setVisibility(View.GONE);
+						videoButtonText.setVisibility(View.GONE);
 						wifiIcon.setVisibility(View.VISIBLE);
-                        videoLoopView.stopPlayback();
-                        videoLoopView = null;
-                        videoViewContainer.removeAllViews();
+						videoLoopView.stopPlayback();
+						videoLoopView = null;
+						videoViewContainer.removeAllViews();
 
-                        animationState = AnimationState.BEFORE_ANIMATION_START;
-                        initAnimations();
+						animationState = AnimationState.BEFORE_ANIMATION_START;
+						initAnimations();
 
-                    } catch (Exception e){
-                        Util.appendLog("Remove all view failed, videoViewContainer.removeAllViews()");
-                    }
+					} catch (Exception e) {
+						Util.appendLog("Remove all view failed, videoViewContainer.removeAllViews()");
+					}
 				}
 				resetIdleTime();
 			}
@@ -1346,7 +1460,7 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 			isCheckingVersion = false;
 		}
 
-        Util.appendLog("Showing company icon for " + company.getName() + "("+company.getCompanyId()+")");
+        Util.appendLog("Showing company icon for " + company.getName() + "(" + company.getCompanyId() + ")");
 
     }
 
@@ -1405,6 +1519,16 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 		testQuestionaires.setVisibility(View.GONE);
 		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map);
+		googleMap = mapFragment.getMap();
+		googleMap.setMyLocationEnabled(true);
+		LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+		Criteria criteria = new Criteria();
+		String bestProvider = locationManager.getBestProvider(criteria, true);
+		Location location = locationManager.getLastKnownLocation(bestProvider);
+		if (location != null) {
+			onLocationChanged(location);
+		}
+		locationManager.requestLocationUpdates(bestProvider, 20000, 0, this);
 
 		mapFragment.getMapAsync(this);
 	}
@@ -1415,7 +1539,7 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 		resetIdleTime();
 		Analytics.getInstance().screenClicked();
 
-		EasyTracker.getInstance(LauncharScreen.this).send(MapBuilder.createEvent("SCREEN_TOUCH",Analytics.SCREEN_TOUCH_EVENT,Analytics.SCREEN_TOUCH_EVENT, 1l).build());
+		EasyTracker.getInstance(LauncharScreen.this).send(MapBuilder.createEvent("SCREEN_TOUCH", Analytics.SCREEN_TOUCH_EVENT, Analytics.SCREEN_TOUCH_EVENT, 1l).build());
 
 		this.saveAnalytic(Analytics.SCREEN_TOUCH_EVENT, 1);
 
@@ -1618,7 +1742,6 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
             initWelcomeScreen();
         } else {
 			wifiIcon.setVisibility(View.VISIBLE);
-            FrameLayout topWhiteBar = (FrameLayout) findViewById(R.id.top_white_bar);
             if(topWhiteBar.getVisibility() == View.INVISIBLE){
                 animationState = AnimationState.BEFORE_ANIMATION_START;
                 initAnimations();
@@ -1628,19 +1751,12 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 
 
 	private void startSkyBGAnimation() {
-        ImageView placeholder = (ImageView) findViewById(R.id.placeholder_bg_sky);
-        placeholder.setAlpha(1f);
+        backgroundImage.setAlpha(1f);
         bgSkyVideo.setVisibility(View.VISIBLE);
-		if(isNight)
-			bgSkyVideo.setVideoURI(Uri.parse("android.resource://"
-					+ getPackageName() + "/" + R.raw.star_loop));
-		else
-			bgSkyVideo.setVideoURI(Uri.parse("android.resource://"
-					+ getPackageName() + "/" + R.raw.sky_loop));
 		bgSkyVideo.setOnPreparedListener(new OnPreparedListener() {
 			@Override
 			public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+				mp.setLooping(true);
 			}
 		});
         bgSkyVideo.start();
@@ -1648,7 +1764,7 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
         AlphaAnimation anim = new AlphaAnimation(1.0f, 0.0f);
         anim.setDuration(2500);
         anim.setFillAfter(true);
-        placeholder.startAnimation(anim);
+        backgroundImage.startAnimation(anim);
         Util.appendLog("Starting sky background animation");
 	}
 
@@ -1742,6 +1858,10 @@ public class LauncharScreen extends BaseActivity implements OnClickListener, Vie
 
 
         return isCharging;
+	}
+
+	public void onChangeTheme(View view) {
+		changeTheme(false, !isNight);
 	}
 
 }

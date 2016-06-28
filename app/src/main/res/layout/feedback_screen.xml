@@ -156,7 +156,7 @@
             android:layout_centerInParent="true"
             android:text="Divida com a gente o que você esta pensando e ganhe prêmios de graça!"
             android:textColor="@color/white"
-            android:textSize="26dp"
+            android:textSize="24dp"
             android:layout_marginTop="40dp"
             android:gravity="center"/>
     </RelativeLayout>

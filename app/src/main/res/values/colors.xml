@@ -22,5 +22,6 @@
     <color name="Graylight">#eeeeee</color>
     <color name="Grayhot">#272727</color>
     <color name="black_overlay">#66000000</color>
+    <color name="day_text_color">#2899df</color>
 
 </resources>
