@@ -192,6 +192,7 @@ public class LauncharScreen extends BaseActivity
 	private ImageView backgroundImage;
 	private ImageView ivContactUs;
 	private GoogleMap googleMap;
+	private Location mLastLocation;
 
 	public void onMapSearch(View view) {
 		EditText locationSearch = (EditText) findViewById(R.id.editText);
@@ -216,23 +217,26 @@ public class LauncharScreen extends BaseActivity
 	@Override
 	public void onMapReady(GoogleMap googleMap) {
 		mMap = googleMap;
-
-		CameraUpdate zoom=CameraUpdateFactory.zoomTo(7);
-		LatLng brasilia = new LatLng(-14.235004, -51.925280);
-
-		mMap.addMarker(new MarkerOptions().position(brasilia).title("Brasilia"));
-		mMap.moveCamera(CameraUpdateFactory.newLatLng(brasilia));
-		mMap.animateCamera(zoom);
-	}
-
-	@Override
-	public void onLocationChanged(Location location) {
-		double latitude = location.getLatitude();
-		double longitude = location.getLongitude();
+		mMap.setMyLocationEnabled(true);
+		if(mLastLocation==null) return;
+		double latitude = mLastLocation.getLatitude();
+		double longitude = mLastLocation.getLongitude();
 		LatLng latLng = new LatLng(latitude, longitude);
 		googleMap.addMarker(new MarkerOptions().position(latLng));
 		googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
 		googleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+	}
+
+	@Override
+	public void onLocationChanged(Location location) {
+		mLastLocation = location;
+		if(mMap==null) return;
+		double latitude = location.getLatitude();
+		double longitude = location.getLongitude();
+		LatLng latLng = new LatLng(latitude, longitude);
+		mMap.addMarker(new MarkerOptions().position(latLng));
+		mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+		mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
 	}
 
 	@Override
@@ -1519,8 +1523,6 @@ public class LauncharScreen extends BaseActivity
 		testQuestionaires.setVisibility(View.GONE);
 		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map);
-		googleMap = mapFragment.getMap();
-		googleMap.setMyLocationEnabled(true);
 		LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 		Criteria criteria = new Criteria();
 		String bestProvider = locationManager.getBestProvider(criteria, true);
@@ -1528,7 +1530,7 @@ public class LauncharScreen extends BaseActivity
 		if (location != null) {
 			onLocationChanged(location);
 		}
-		locationManager.requestLocationUpdates(bestProvider, 20000, 0, this);
+		locationManager.requestLocationUpdates(bestProvider, 1, 0, this);
 
 		mapFragment.getMapAsync(this);
 	}

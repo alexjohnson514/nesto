@@ -393,7 +393,8 @@
         android:layout_marginLeft="10dp"
         android:orientation="horizontal"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp">
 
         <LinearLayout
             android:id="@+id/feedback_area"
